@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="MapScanner settings"
+    android:key="mapScannerSettings">
+    <PreferenceCategory
+        android:title="Tracking Settings"
+        android:key="trackingSettings"
+        android:theme="@style/PreferenceScreen" >
+    <EditTextPreference
+        android:title="Map Size"
+        android:key="mapSize"
+        android:defaultValue="40"
+        android:summary="Default map length/width in meters."/>
+    <EditTextPreference
+        android:title="Step Length"
+        android:key="stepLength"
+        android:defaultValue="1"
+        android:summary="Calibrate step length in meters."/>
+    <EditTextPreference
+        android:title="Sensor Poll Rate"
+        android:key="sensorRate"
+        android:defaultValue="20"
+        android:summary="Polling rate of inertial sensors in Hz (Default:20)."/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Acoustic Settings"
+        android:key="acousticSettings">
+    <EditTextPreference
+        android:title="Ping Interval"
+        android:key="pingIntvl"
+        android:defaultValue="20"
+        android:summary="Time interval between each chirp in ms (Default:50)."/>
+    <EditTextPreference
+        android:title="Carrier Frequency"
+        android:key="carrierFreq"
+        android:defaultValue="8000"
+        android:summary="The starting frequency for emitting sound signal in Hz (Default:8000)."/>
+    <EditTextPreference
+        android:title="Frequency Band"
+        android:key="bandFreq"
+        android:defaultValue="2000"
+        android:summary="Frequency range for modulation in Hz (Default:2000)."/>
+    <EditTextPreference
+        android:title="Number of Emitting"
+        android:key="emitNumber"
+        android:defaultValue="20"
+        android:summary="Number of continuous emitting for batch processing (Default: 20)."/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MapScanner">
+
+    <com.ecemoca.zhoub.mapscanner.visualization.graphPlot
+        android:id="@+id/SinglePingSurface"
+        android:layout_height="984sp"
+        android:layout_width="984sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/buttonEmit" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/yaw"
+        android:id="@+id/textYaw"
+        android:textAlignment="textStart"
+        android:layout_below="@+id/textTemp"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/roll"
+        android:id="@+id/textRoll"
+        android:textAlignment="textStart"
+        android:layout_alignTop="@+id/textPitch"
+        android:layout_toEndOf="@+id/textYaw" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pitch"
+        android:id="@+id/textPitch"
+        android:textAlignment="textStart"
+        android:layout_above="@+id/textAccz"
+        android:layout_alignStart="@+id/textHeight" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/accx"
+        android:id="@+id/textAccx"
+        android:layout_gravity="center|left"
+        android:layout_below="@+id/textYaw"
+        android:layout_alignParentStart="true"
+        android:textAlignment="textStart"
+        android:layout_toStartOf="@+id/textRoll" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/accy"
+        android:id="@+id/textAccy"
+        android:layout_gravity="center|left"
+        android:layout_alignStart="@+id/textRoll"
+        android:layout_below="@+id/textRoll"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/accz"
+        android:id="@+id/textAccz"
+        android:layout_gravity="center|left"
+        android:layout_alignTop="@+id/textAccx"
+        android:layout_alignStart="@+id/textPitch"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lax"
+        android:id="@+id/textLAx"
+        android:layout_gravity="center|left"
+        android:layout_above="@+id/textMagx"
+        android:layout_alignParentStart="true"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lay"
+        android:id="@+id/textLAy"
+        android:layout_gravity="center|left"
+        android:textAlignment="textStart"
+        android:layout_below="@+id/textAccx"
+        android:layout_alignEnd="@+id/buttonEmit"
+        android:layout_marginEnd="26dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/laz"
+        android:id="@+id/textLAz"
+        android:layout_gravity="center|left"
+        android:textAlignment="textStart"
+        android:layout_below="@+id/textAccy"
+        android:layout_toStartOf="@+id/textAccz" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temp"
+        android:id="@+id/textTemp"
+        android:layout_alignBaseline="@+id/textHeight"
+        android:layout_alignBottom="@+id/textHeight"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/textRoll" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/magx"
+        android:id="@+id/textMagx"
+        android:layout_below="@+id/textLAy"
+        android:layout_alignParentStart="true"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/magy"
+        android:id="@+id/textMagy"
+        android:layout_alignStart="@+id/textLAy"
+        android:layout_below="@+id/textLAx"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/magz"
+        android:id="@+id/textMagz"
+        android:layout_below="@+id/textLAz"
+        android:layout_alignStart="@+id/textLAz"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/steps_0"
+        android:id="@+id/textStep"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/textRoll"
+        android:layout_toEndOf="@+id/textYaw" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="@string/y_0_0"
+        android:id="@+id/textCordy"
+        android:textColor="#f90606"
+        android:layout_below="@+id/textCordx"
+        android:layout_alignEnd="@+id/textCordx"
+        android:textSize="10sp"
+        android:layout_alignStart="@+id/textCordx" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="@string/emit"
+        android:id="@+id/buttonEmit"
+        android:textSize="12sp"
+        android:layout_below="@+id/textBot"
+        android:layout_alignEnd="@+id/textY0" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/distances"
+        android:id="@+id/textTop"
+        android:layout_below="@+id/textMagx"
+        android:textColor="#091df7"
+        android:layout_toStartOf="@+id/textX4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textY2"
+        android:textColor="#fb0404"
+        android:textSize="10sp"
+        android:text="@string/_0"
+        android:layout_below="@+id/textY1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="76dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textY1"
+        android:textColor="#fa0505"
+        android:textSize="10sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/textMagy"
+        android:text="@string/_5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textY0"
+        android:textColor="#fa0606"
+        android:textSize="10sp"
+        android:text="@string/_10"
+        android:layout_alignTop="@+id/SinglePingSurface"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/textX2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textY3"
+        android:textColor="#fa0606"
+        android:textSize="10sp"
+        android:layout_below="@+id/textY2"
+        android:layout_marginTop="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textY0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textY4"
+        android:textColor="#f70909"
+        android:textSize="10sp"
+        android:text="@string/_5y"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textX3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_5_0"
+        android:id="@+id/textX1"
+        android:textColor="#f10707"
+        android:textSize="10sp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/buttonEmit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0_0"
+        android:id="@+id/textX2"
+        android:textColor="#f20c0c"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_5_0x"
+        android:id="@+id/textX3"
+        android:textColor="#f20c0c"
+        android:textSize="10sp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/buttonConti" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_10_0"
+        android:id="@+id/textX4"
+        android:textColor="#f00b0b"
+        android:textSize="10sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/SinglePingSurface" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="@string/cont"
+        android:id="@+id/buttonConti"
+        android:textSize="12sp"
+        android:layout_above="@+id/SinglePingSurface"
+        android:layout_toEndOf="@+id/textX2" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="@string/start"
+        android:id="@+id/buttonInertial"
+        android:textSize="12sp"
+        android:layout_below="@+id/textBot"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/altitude"
+        android:id="@+id/textHeight"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/textTop"
+        android:layout_toEndOf="@+id/textRoll" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bot"
+        android:id="@+id/textBot"
+        android:textColor="#0729e8"
+        android:layout_below="@+id/textTop"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textTop" />
+
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="@string/x_0_0"
+        android:id="@+id/textCordx"
+        android:textColor="#f90606"
+        android:textSize="10sp"
+        android:layout_alignTop="@+id/SinglePingSurface"
+        android:layout_alignEnd="@+id/textX4"
+        android:layout_toEndOf="@+id/textY4" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="@string/clear"
+        android:id="@+id/buttonClear"
+        android:textSize="12sp"
+        android:layout_below="@+id/textBot"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="@string/loop"
+        android:id="@+id/buttonLoop"
+        android:textSize="12sp"
+        android:layout_above="@+id/textTop"
+        android:layout_alignStart="@+id/buttonClear" />
+
+</RelativeLayout>

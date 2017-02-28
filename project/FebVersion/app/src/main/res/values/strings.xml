@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">"MapScanner "</string>
+    <string name="mag_z">Mag_z</string>
+    <string name="mag_y">Mag_y</string>
+    <string name="mag_x">Mag_x</string>
+    <string name="temp">Temp:</string>
+    <string name="accx">Accx:</string>
+    <string name="accy">Accy:</string>
+    <string name="accz">Accz:</string>
+    <string name="lax">LAx:</string>
+    <string name="lay">LAy:</string>
+    <string name="laz">LAz:</string>
+    <string name="magx">Magx:</string>
+    <string name="magz">Magz:</string>
+    <string name="x_0_0">X: 0.0</string>
+    <string name="y_0_0">Y: 0.0</string>
+    <string name="distances">Top:</string>
+    <string name="yaw">Yaw:</string>
+    <string name="roll">Roll:</string>
+    <string name="pitch">Pitch:</string>
+    <string name="magy">Magy:</string>
+    <string name="steps">Step:</string>
+    <string name="emit">Emit</string>
+    <string name="_5_0">-5.0</string>
+    <string name="_0_0">0.0</string>
+    <string name="_5_0x">5.0</string>
+    <string name="_10_0">10.0</string>
+    <string name="n_0">N: 0</string>
+    <string name="conti">Conti</string>
+    <string name="cont">cont</string>
+    <string name="_10">10</string>
+    <string name="_5">5</string>
+    <string name="_0">0</string>
+    <string name="_5y">-5</string>
+    <string name="guidelines">
+        \nMapScanner: Acoustic Sensing Based Fine-grained Indoor Floor Plan Construction Using Smartphones
+	    \n\n<b>1. User trace real-time tracking</b>
+	    \n\nDone!
+        \n\n<b>2. Distance candidates generation</b>
+	    \n\nPartially done.
+        \n\n<b>3. Distance-object association</b>
+	    \n\nOn the way...
+        \n\n<b>4. Real-time floor plan construction!</b>
+        \n\nFinal goal :)
+        \n\n Contact: zhoubinwy@gmail.com
+        \n Electrical and Computer Engineering,Stony Brook University
+    </string>
+    <string name="inertial">Inertial</string>
+    <string name="stepsN">Steps:</string>
+    <string name="height">Height:</string>
+    <string name="altitude">Alt:</string>
+    <string name="steps_0">Step: 0</string>
+    <string name="start">START</string>
+    <string name="clear">CLEAR</string>
+    <string name="bot">Bot:</string>
+    <string name="loop">LOOP</string>
+</resources>
